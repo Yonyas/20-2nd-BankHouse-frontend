@@ -26,11 +26,11 @@
 - [안준현](https://github.com/junchi211)
 - [이지연](https://github.com/Yonyas)
 
-### Backend 2명
-
+### Backend 2명 
+_[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankHouse-backend)_
 - [김경래](https://github.com/kyeongraekim)
 - [최대환](https://github.com/Dae-Hwan)
-- [백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankHouse-backend)
+
 
 ## 적용 기술
 
