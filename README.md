@@ -20,17 +20,8 @@
 # :rocket:팀원
 
 ### Frontend 4명
-
-- [김유림](https://github.com/yurim45)
-- [안정현](https://github.com/ahnjeongh2)
-- [안준현](https://github.com/junchi211)
-- [이지연](https://github.com/Yonyas)
-
 ### Backend 2명 
 _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankHouse-backend)_
-- [김경래](https://github.com/kyeongraekim)
-- [최대환](https://github.com/Dae-Hwan)
-
 
 ## 적용 기술
 
@@ -54,7 +45,8 @@ _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankH
   *  페이지 스크롤 시, 메인 Nav 고정 기능(position: sticky 적용)
   *  localStorge 상의 access token 저장 여부에 따른 로그인/로그아웃 상태 변화
 - 페이지 헤더 슬라이더
-  * 라이브러리(slick slider)를 활용한 슬라이더 구현
+  * 라이브러리(slick slider)를 활용한 슬라이더 구현 
+   - 반응형으로 만들려고 했는데 라이브러리에서 height가 자동으로 지정이 되고 있었다. 개발자도구에서 보이는 클래스를 넣어서 height를 변경해도 수정되지 않는다. slide-list, slide-track 등 중간에 height를 작게 만드는 요소가 있는데 이들 변경이 되지 않는다.
 - 컨텐츠 필터링 기능
 - 컨텐츠 card 기능
   * 동적라우팅을 활용한 페이지 이동 구현(카테고리 페이지 -> 상세 페이지)
@@ -80,9 +72,3 @@ _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankH
 
 ## 데모 영상
 - [유튜브 영상 링크](https://www.youtube.com/watch?v=yCrwiy9oFAQ)
-
-
-## 💥 Reference
-- 이 프로젝트는 [오늘의집](https://ohou.se/) 사이트를 참조하여 학습목적으로 만들었습니다.
-- 실무수준의 프로젝트이지만 학습용으로 만들었기 때문에 이 코드를 활용하여 이득을 취하거나 무단 배포할 경우 법적으로 문제될 수 있습니다.
-- 이 프로젝트에서 사용하고 있는 사진 대부분은 위코드에서 구매한 것이므로 해당 프로젝트 외부인이 사용할 수 없습니다.
