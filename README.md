@@ -31,7 +31,7 @@ _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankH
 
 ## 구현 사항
 
-### 로그인/회원가입 페이지
+### ✅ 로그인/회원가입 페이지
 #### 일반 로그인 및 회원가입
   * 정규식을 활용한 로그인/회원가입 유효성 체크
   * 로그인/회원가입 input 값 유효성 체크 통과 여부 실시간 알림 기능
@@ -39,7 +39,7 @@ _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankH
   * OAuth2.0 기반 카카오 로그인 API 연동
 
 
-### 메인 페이지(사진 카테고리 페이지)
+### ✅ 메인 페이지(사진 카테고리 페이지)
 #### Nav 컴포넌트
   *  location 객체를 활용한 커뮤니티 내 카테고리 메뉴 경로 이동에 따른 폰트 색 변경
   *  페이지 스크롤 시, 메인 Nav 고정 기능(position: sticky 적용)
@@ -57,12 +57,12 @@ _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankH
 #### Footer 컴포넌트
 
 
-### 사진 card component 상세 페이지
+### ✅ 사진 card component 상세 페이지
 #### 댓글 추가 및 해당 이미지 삭제 기능 구현
 #### 댓글 게시된 시간 계산하여 1분전, 2분전 등 표기 기능 구현   
 
 
-### 글쓰기 페이지
+### ✅ 글쓰기 페이지
 #### 글쓰기 기능 (사진 및 내용 업로드)
   * 옵션값 미선택시, 해당 인풋창 보더 색 변경
   * 옵션값 선택시, placeholder 검정으로 변경 
