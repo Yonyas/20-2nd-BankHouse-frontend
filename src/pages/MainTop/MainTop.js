@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageSlide from '../MainTop/ImageSlide/ImageSlide';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { flexSet } from '../../styles/Variable';
+import { mainPadding } from '../../styles/Variable';
 
 function MainTop() {
   return (
@@ -13,7 +14,7 @@ function MainTop() {
             <StoryEntryImage
               alt="story image"
               src="https://images.unsplash.com/photo-1452457436726-a8e6ea2adf29?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRhYmxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            ></StoryEntryImage>
+            />
             <StoryEntryContentWrap>
               <StoryEntryContent>
                 <StoryEntryContentCategory>34평 신축</StoryEntryContentCategory>
@@ -24,7 +25,7 @@ function MainTop() {
                   <StoryEntryContentProfileImage
                     alt="profile image"
                     src="https://images.unsplash.com/photo-1452457436726-a8e6ea2adf29?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRhYmxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                  ></StoryEntryContentProfileImage>
+                  />
                   <StoryEntryContentProfileName>
                     Bank House
                   </StoryEntryContentProfileName>
@@ -35,13 +36,13 @@ function MainTop() {
           </StoryEntryImageWrap>
         </Link>
       </StoryEntryHomeHeaderImage>
-      <HomeHeaderBanner>
+      <HomeHeaderBannerWrap>
         <Link to="/">
-          <HomeHeaderBannderWrap>
+          <HomeHeaderBanner>
             <ImageSlide />
-          </HomeHeaderBannderWrap>
+          </HomeHeaderBanner>
         </Link>
-      </HomeHeaderBanner>
+      </HomeHeaderBannerWrap>
     </Row>
   );
 }
@@ -49,24 +50,33 @@ function MainTop() {
 export default MainTop;
 
 const Row = styled.div`
-  ${flexSet('center', 'center')}
+  ${flexSet('space-between', 'start')}
+  ${mainPadding()}
   margin: 10px auto;
+  max-height: 560px;
+  align-items: stretch;
 `;
 
 const StoryEntryHomeHeaderImage = styled.article`
   padding: 0 15px;
+  width: 75%;
+  flex: 1 0 75%;
 `;
 
 const StoryMore = styled.div`
   ${flexSet('center', 'center')}
-  width: 142px;
-  height: 52px;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   border-radius: 2px;
+  padding: 10px;
+  min-width: 86px;
 `;
 
 const StoryEntryImageWrap = styled.div`
   position: relative;
+  flex: 1 0 100%;
+  max-width: 100%;
+  overflow: hidden;
+
   &:hover {
     ${StoryMore} {
       background-color: #00c7f5;
@@ -76,12 +86,11 @@ const StoryEntryImageWrap = styled.div`
 `;
 
 const StoryEntryImage = styled.img`
-  width: 847px;
-  height: 565px;
+  min-height: 408px;
+  min-width: 100%;
   border-radius: 5px;
   object-fit: cover;
   z-index: -1;
-  overflow: hidden;
 `;
 
 const StoryEntryContentWrap = styled.div`
@@ -93,11 +102,9 @@ const StoryEntryContentWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 777px;
-  height: 540px;
+  padding: 10px 30px;
   margin: 10px auto;
-  /* padding: 40px; */
-  color: #ffffff;
+  color: #fff;
   z-index: 2;
 `;
 
@@ -130,11 +137,15 @@ const StoryEntryContentProfileName = styled.span`
   font-size: 13px;
 `;
 
-const HomeHeaderBanner = styled.aside`
+const HomeHeaderBannerWrap = styled.aside`
+  position: relative;
+  flex: 1 0 25%;
   padding: 0 15px;
-  width: 300px;
+  align-items: stretch;
+  overflow: hidden;
 `;
 
-const HomeHeaderBannderWrap = styled.div`
-  position: relative;
+const HomeHeaderBanner = styled.div`
+  width: 100%;
+  height: 100%;
 `;

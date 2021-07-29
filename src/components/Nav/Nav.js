@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 import TopBanner from './TopBanner';
 import { flexSet } from '../../styles/Variable';
 import { mediaQuery } from '../../styles/Variable';
+import { mainPadding } from '../../styles/Variable';
 
 const COMMUNITY_CATEGORY_LIST = [
   { menuName: '홈', path: '/' },
@@ -13,7 +14,7 @@ const COMMUNITY_CATEGORY_LIST = [
   { menuName: '전문가집들이', path: '/experthouseparty' },
   { menuName: '셀프가이드', path: '/selfguide' },
   { menuName: '질문과답변', path: '/questionandanswer' },
-  // { menuName: '이벤트', path: '/event' },
+  { menuName: '이벤트', path: '/event' },
 ];
 
 function Nav({ theme }) {
@@ -242,11 +243,7 @@ const BottomNavContainerInnerWrapper = styled.div`
   max-width: 1256px;
   height: 50px;
   margin: 0 auto;
-  padding: 10px 60px;
-
-  @media only screen and (max-width: ${mediaQuery.BREAK_POINT_TABLET}px) {
-    padding: 10px 40px;
-  }
+  ${mainPadding()}
 `;
 
 const CommunityMenuWrapper = styled.ul`

@@ -10,7 +10,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   autoplayspeed: 1000,
 };
 
@@ -25,21 +25,32 @@ function ImageSlide() {
       });
   }, []);
 
-  return slideDatas ? (
+  return (
     <StyledSlider {...settings}>
-      {slideDatas.map((slideData, index) => {
-        return <StoryBanner alt="slide image" src={slideData} key={index} />;
+      {slideDatas?.map((slideData, index) => {
+        return (
+          <StoryBannerWrapper>
+            <StoryBanner alt="slide image" src={slideData} key={index} />
+          </StoryBannerWrapper>
+        );
       })}
     </StyledSlider>
-  ) : null;
+  );
 }
 
 export default ImageSlide;
 
 const StyledSlider = styled(Slider)`
   .slick-slider {
-    position: relative;
-    overflow: hidden;
+    min-height: 100%;
+    border: 5px solid blue;
+  }
+  .slick-list {
+    height: 100%;
+  }
+  .slick-track {
+    min-height: 100%;
+    background-color: black;
   }
 
   .slick-prev {
@@ -99,9 +110,19 @@ const StyledSlider = styled(Slider)`
   }
 `;
 
+const StoryBannerWrapper = styled.div`
+  min-height: 100%;
+  flex: 1 0 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: 3px solid green;
+`;
+
 const StoryBanner = styled.img`
-  width: 269px;
-  height: 565px;
+  height: 100%;
+  /* height: 500px; */
+  width: 100%;
   border-radius: 5px;
   object-fit: cover;
+  overflow: hidden;
 `;
