@@ -47,6 +47,7 @@ _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankH
 #### 페이지 헤더 슬라이더
   * 라이브러리(slick slider)를 활용한 슬라이더 구현 
    - 반응형으로 만들려고 했는데 라이브러리에서 height가 자동으로 지정이 되고 있었다. 개발자도구에서 보이는 클래스를 넣어서 height를 변경해도 수정되지 않는다. slide-list, slide-track 등 중간에 height를 작게 만드는 요소가 있는데 이들 변경이 되지 않는다. 그래서 flex의 height를 스크롤바가 움직일때마다 파악해서 slider img의 크기로 넣어줘야하나 싶다. height 를 px로 지정하면 되기 때문. 
+   - 다른 라이브러리를 써봤다. (react-reponsive-carousel) 이것도 개발자도구에서 하나씩 height: 100%;주면 크기가 커지다가 img에는 heigth가 먹히지 않는다. !important를 주니까 먹힌다. 문제는 라이브러리 내부에서 height값을 넣을 엘리먼트를 찾아야하는데 그게 어렵다.
 #### 컨텐츠 필터링 기능
 #### 컨텐츠 card 기능
   * 동적라우팅을 활용한 페이지 이동 구현(카테고리 페이지 -> 상세 페이지)
