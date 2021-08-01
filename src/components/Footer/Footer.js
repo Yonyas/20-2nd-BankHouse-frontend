@@ -14,10 +14,9 @@ function Footer() {
                   <CustomerCenterTitle>고객센터</CustomerCenterTitle>
                   <i className="fas fa-chevron-right" />
                 </GoToCustomerCenterLink>
-                <CustomerCenterTelNumber>1670-0876</CustomerCenterTelNumber>
+                <CustomerCenterTelNumber>1234-5678</CustomerCenterTelNumber>
                 <CustomerCenterWorkTime>
-                  평일 09:00 ~ 18:00 (주말 & 공휴일 제외)
-                </CustomerCenterWorkTime>
+24시간                </CustomerCenterWorkTime>
               </div>
               <RelatedLinksWrapper>
                 <FaIcon className="fab fa-apple" />
@@ -51,20 +50,15 @@ function Footer() {
             })}
           </ThirdFooterLayoutContents>
           <FourthFooterLayoutContents>
-            우리은행 채무지급보증안내 : (주)버킷플레이스는 고객님이 현금결제한
-            금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를
-            보장하고 있습니다.
+            안전거래를 보장합니다.
           </FourthFooterLayoutContents>
           <FourthFooterLayoutContentsBold>
-            서비스가입사실 확인
-          </FourthFooterLayoutContentsBold>
+통신중개업 사이트입니다          </FourthFooterLayoutContentsBold>
           <FifthFooterLayoutContents>
-            (주)버킷플레이스는 통신판매중개자로서 통신판매의 당사자가 아니며,
-            입점업체가 등록한 상품, 상품정보 및 거래에 대하여 (주)버킷플레이스는
-            일체 책임을 지지 않습니다.
+            은행의집 어떠신가요
           </FifthFooterLayoutContents>
           <SixthFooterLayoutContents>
-            Copyright 2014. bucketplace, Co., Ltd. All rights reserved
+            Copyright 2021
           </SixthFooterLayoutContents>
         </FooterLayoutInnerWrapper>
       </FooterLayoutWrapper>
@@ -88,18 +82,16 @@ const FOOTER_MENU_LIST = [
 ];
 
 const CONTACT_INFORMATION_LIST = [
-  { infoName: '상호명', detailInfo: '(주)버킷플레이스' },
+  { infoName: '상호명', detailInfo: '위코드' },
   {
     infoName: '이메일',
     detailInfo:
-      '(고객문의) cs@bucketplace.net (제휴문의) contact@bucketplace.net',
+      '(고객문의) jiyonlee.d@gmail.com'
   },
-  { infoName: '대표이사', detailInfo: '이승재' },
-  { infoName: '사업자등록번호', detailInfo: '119-86-91245' },
-  { infoName: '통신판매업신고번호', detailInfo: '제2018-서울서초-0580호' },
+  { infoName: '대표이사', detailInfo: '이지연' },
   {
     infoName: '주소',
-    detailInfo: '서울 서초구 서초대로74길 4 삼성생명서초타워 27층',
+    detailInfo: '서울 강남구 테헤란로',
   },
 ];
 
