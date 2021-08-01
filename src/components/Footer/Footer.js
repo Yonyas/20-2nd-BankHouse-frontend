@@ -82,13 +82,13 @@ const FOOTER_MENU_LIST = [
 ];
 
 const CONTACT_INFORMATION_LIST = [
-  { infoName: '상호명', detailInfo: '위코드' },
+  { infoName: '상호명', detailInfo: '지연월드' },
   {
     infoName: '이메일',
     detailInfo:
       '(고객문의) jiyonlee.d@gmail.com'
   },
-  { infoName: '대표이사', detailInfo: '이지연' },
+  { infoName: '사장', detailInfo: '이지연' },
   {
     infoName: '주소',
     detailInfo: '서울 강남구 테헤란로',
