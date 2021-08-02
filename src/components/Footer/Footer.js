@@ -15,8 +15,7 @@ function Footer() {
                   <i className="fas fa-chevron-right" />
                 </GoToCustomerCenterLink>
                 <CustomerCenterTelNumber>1234-5678</CustomerCenterTelNumber>
-                <CustomerCenterWorkTime>
-24시간                </CustomerCenterWorkTime>
+                <CustomerCenterWorkTime>24시간</CustomerCenterWorkTime>
               </div>
               <RelatedLinksWrapper>
                 <FaIcon className="fab fa-apple" />
@@ -53,13 +52,12 @@ function Footer() {
             안전거래를 보장합니다.
           </FourthFooterLayoutContents>
           <FourthFooterLayoutContentsBold>
-통신중개업 사이트입니다          </FourthFooterLayoutContentsBold>
+            통신중개업 사이트입니다{' '}
+          </FourthFooterLayoutContentsBold>
           <FifthFooterLayoutContents>
             은행의집 어떠신가요
           </FifthFooterLayoutContents>
-          <SixthFooterLayoutContents>
-            Copyright 2021
-          </SixthFooterLayoutContents>
+          <SixthFooterLayoutContents>Copyright 2021</SixthFooterLayoutContents>
         </FooterLayoutInnerWrapper>
       </FooterLayoutWrapper>
     </FooterLayoutContainer>
@@ -85,8 +83,7 @@ const CONTACT_INFORMATION_LIST = [
   { infoName: '상호명', detailInfo: '위코드' },
   {
     infoName: '이메일',
-    detailInfo:
-      '(고객문의) jiyonlee.d@gmail.com'
+    detailInfo: '(고객문의) jiyonlee.d@gmail.com',
   },
   { infoName: '대표이사', detailInfo: '이지연' },
   {
