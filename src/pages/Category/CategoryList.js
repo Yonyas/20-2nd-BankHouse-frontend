@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import DropDown from './DropDown';
 import { flexSet } from '../../styles/Variable';
+import { mainPadding } from '../../styles/Variable';
 
 function CategoryList({
   selectedCategory,
@@ -11,11 +12,14 @@ function CategoryList({
   categoryListData,
 }) {
   const [category, setCategory] = useState([]);
+
+  // selectedArr = [['orderby', '조회수], ['livingtype', '원룸']];
   const selectedArr = Object.entries(selectedCategory).map(el => [
     el[0],
     el[1].categoryName,
   ]);
-  const selectedValues = selectedArr.map(el => el[1]).filter(el => el);
+  //selectedValues = ['조회수', '원룸'];
+  const selectedValues = selectedArr.map(el => el[1]);
 
   useEffect(() => {
     setCategory(categoryListData);
@@ -63,7 +67,7 @@ const WrapCategory = styled.section`
 
 const FilterBar = styled.ul`
   ${flexSet('flex-start', 'center')}
-  padding: 5px 0;
+  ${mainPadding()}
 `;
 
 const CategoryName = styled.li`

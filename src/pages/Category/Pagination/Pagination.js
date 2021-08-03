@@ -1,11 +1,11 @@
 import React from 'react';
 import PageLi from './PageLi';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
-function Pagination({ pageNumber, paginate, fetchCardData, currentPage }) {
-  const pageNumberList = new Array(pageNumber)
-    .fill(1)
-    .map((el, idx) => idx + 1);
+function Pagination({ totalPageNumber, paginate, fetchCardData, currentPage }) {
+  const pageNumberList = new Array(totalPageNumber)
+    .fill()
+    .map((_, idx) => idx + 1);
 
   return (
     <div>

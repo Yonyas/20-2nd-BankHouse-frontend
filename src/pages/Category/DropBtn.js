@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 function DropBtn({ el, selectedCategory, updateSelectCategory, selectedArr }) {
   const [over, setOver] = useState(false);
@@ -49,7 +49,6 @@ const DropDownList = styled.li`
 
 const DropBar = styled.ul`
   position: absolute;
-  top: 830px;
   width: 210px;
   background: #fff;
   border-radius: 10px;
