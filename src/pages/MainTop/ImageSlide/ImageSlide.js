@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-function ImageSlide() {
+function ImageSlide({ height }) {
   const [slideDatas, setSlideDatas] = useState();
 
   useEffect(() => {
@@ -12,14 +12,19 @@ function ImageSlide() {
       .then(data => {
         setSlideDatas(data.imgUrls);
       });
-  }, []);
+  }, [height]);
 
   return (
-    <Carousel dynamicHeight="true" minHeight="100%">
+    <Carousel dynamicHeight="true" minHeight="100%" showThumbs="false">
       {slideDatas?.map((slideData, index) => {
         return (
           <StoryBannerWrapper>
-            <StoryBanner alt="slide image" src={slideData} key={index} />
+            <StoryBanner
+              alt="slide image"
+              src={slideData}
+              key={index}
+              height={height}
+            />
           </StoryBannerWrapper>
         );
       })}
@@ -38,8 +43,9 @@ const StoryBannerWrapper = styled.div`
 `;
 
 const StoryBanner = styled.img`
-  height: 100%;
-  /* height: 500px; */
+  /* height: ${props =>
+    props.height > 408 ? `${props.height}px` : '408px'}; */
+  height: 392px;
   width: 100%;
   border-radius: 5px;
   object-fit: cover;
