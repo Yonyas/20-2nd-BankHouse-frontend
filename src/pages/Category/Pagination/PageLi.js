@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 function PageLi({ num, paginate, fetchCardData, currentPage }) {
   const handlePageNumber = num => {
@@ -8,7 +8,7 @@ function PageLi({ num, paginate, fetchCardData, currentPage }) {
   };
 
   return (
-    <PageList key={num}>
+    <PageList>
       {num === currentPage ? (
         <PageNumber onClick={() => handlePageNumber(num)}>{num}</PageNumber>
       ) : (

@@ -11,13 +11,14 @@ function Category() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postCount, setPostCount] = useState(1);
   const postsPerPage = 16;
-  const pageNumber = Math.ceil(postCount / postsPerPage);
+  const totalPageNumber = Math.ceil(postCount / postsPerPage);
 
   useEffect(() => {
     fetchCardData();
   }, [selectedCategory]);
 
   const fetchCardData = () => {
+    console.log(`selectedCateogry`, selectedCategory);
     const queryString = Object.entries(selectedCategory).map(el => {
       return el[1].categoryId ? `&${el[0]}=${el[1].categoryId}` : '';
     });
@@ -27,6 +28,7 @@ function Category() {
     )
       .then(response => response.json())
       .then(postdata => {
+        console.log(postdata);
         setCardData(postdata.results);
         setPostCount(postdata.post_count);
       });
@@ -56,7 +58,7 @@ function Category() {
       <CategoryCard cardData={cardData} />
 
       <Pagination
-        pageNumber={pageNumber}
+        totalPageNumber={totalPageNumber}
         paginate={setCurrentPage}
         fetchCardData={fetchCardData}
         currentPage={currentPage}
