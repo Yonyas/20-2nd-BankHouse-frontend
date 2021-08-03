@@ -45,10 +45,17 @@ _[백엔드 github 링크](https://github.com/wecode-bootcamp-korea/20-2nd-BankH
 
 #### 페이지 헤더 슬라이더
 
-- 라이브러리(slick slider)를 활용한 슬라이더 구현
+##### 라이브러리(slick slider)를 활용한 슬라이더 구현
 
-* 반응형으로 만들려고 했는데 라이브러리에서 height가 자동으로 지정이 되고 있었다. 개발자도구에서 보이는 클래스를 넣어서 height를 변경해도 수정되지 않는다. slide-list, slide-track 등 중간에 height를 작게 만드는 요소가 있는데 이들 변경이 되지 않는다. 그래서 flex의 height를 스크롤바가 움직일때마다 파악해서 slider img의 크기로 넣어줘야하나 싶다. height 를 px로 지정하면 되기 때문.
-* 다른 라이브러리를 써봤다. (react-reponsive-carousel) 이것도 개발자도구에서 하나씩 height: 100%;주면 크기가 커지다가 img에는 heigth가 먹히지 않는다. !important를 주니까 먹힌다. 문제는 라이브러리 내부에서 height값을 넣을 엘리먼트를 찾아야하는데 그게 어렵다.
+- 반응형으로 만들려고 했는데 라이브러리에서 height가 자동으로 지정이 되고 있었다. 개발자도구에서 보이는 클래스를 넣어서 height를 변경해도 수정되지 않는다. slide-list, slide-track 등 중간에 height를 작게 만드는 요소가 있는데 이들 변경이 되지 않는다.
+
+##### react-responsive-carousel 라이브러리 사용
+
+다른 라이브러리를 써봤다. 이것도 개발자도구에서 하나씩 height: 100%;주면 크기가 바뀌다가 img에는 height가 먹히지 않는다. !important를 주니까 먹힌다. 문제는 라이브러리 내부에서 height값을 넣을 엘리먼트를 찾아야하는데 그게 어렵다.
+
+- node_module상의 코드를 수정해서 height를 변경하는데 성공했다. 변경 후 `npx patch-package <package name>`을 하면 된다. 하지만 어떤 height들은 css파일에서 찾을 수가 없었다. js로 높이변경을 하는 것 같은데 코드들이 너무 헷갈린다..
+  아래 코드에서 첫번째 두번째 클래스의 height는 코드에서 쉽게 찾았으나 slider-wrapper의 높이는 어디서 지정하는지 찾지 못했다.
+  <img width="353" alt="스크린샷 2021-08-02 오후 6 37 55" src="https://user-images.githubusercontent.com/60434382/127841694-cfde77e4-0d53-4214-a1b1-0bf0c0c3385f.png">
 
 #### 컨텐츠 필터링 기능
 

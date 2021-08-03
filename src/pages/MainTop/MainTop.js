@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ImageSlide from '../MainTop/ImageSlide/ImageSlide';
 import styled from 'styled-components/macro';
@@ -6,9 +6,21 @@ import { flexSet } from '../../styles/Variable';
 import { mainPadding } from '../../styles/Variable';
 
 function MainTop() {
+  const heightRef = useRef();
+  const [responsiveHeight, setResponsiveHeight] = useState(0);
+
+  useEffect(() => {
+    const changeCarouselSize = () => {
+      setResponsiveHeight(heightRef.current?.clientHeight);
+    };
+
+    window.addEventListener('resize', changeCarouselSize);
+    return () => window.removeEventListener('resize', changeCarouselSize);
+  }, [responsiveHeight]);
+
   return (
     <Row>
-      <StoryEntryHomeHeaderImage>
+      <StoryEntryHomeHeaderImage ref={heightRef}>
         <Link to="/">
           <StoryEntryImageWrap>
             <StoryEntryImage
@@ -39,7 +51,7 @@ function MainTop() {
       <HomeHeaderBannerWrap>
         <Link to="/">
           <HomeHeaderBanner>
-            <ImageSlide />
+            <ImageSlide height={responsiveHeight} />
           </HomeHeaderBanner>
         </Link>
       </HomeHeaderBannerWrap>
