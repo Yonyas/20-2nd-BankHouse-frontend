@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import TopBanner from './TopBanner';
@@ -17,9 +18,20 @@ const COMMUNITY_CATEGORY_LIST = [
   { menuName: '이벤트', path: '/event' },
 ];
 
-function Nav({ theme }) {
+function Nav({ history }) {
   const location = useLocation();
   const isLoggedIn = localStorage.getItem('access_token');
+  const logout = () => {
+    localStorage.removeItem('access_token');
+  };
+
+  const goToLoginPage = () => {
+    history.push(`/login`);
+  };
+
+  const goToWritePage = () => {
+    history.push('/write');
+  };
 
   return (
     <>
@@ -40,11 +52,17 @@ function Nav({ theme }) {
           <CartAndLogin>
             <CartIcon className="fas fa-shopping-cart" />
             <LoginIcon>
-              <NavLogin>{isLoggedIn ? '로그아웃' : '로그인'}</NavLogin>
+              <NavLogin
+                onClick={() => {
+                  isLoggedIn ? logout() : goToLoginPage();
+                }}
+              >
+                {isLoggedIn ? '로그아웃' : '로그인'}
+              </NavLogin>
               <NavLogin>회원가입</NavLogin>
             </LoginIcon>
           </CartAndLogin>
-          <NavWriteBtn>글쓰기</NavWriteBtn>
+          <NavWriteBtn onClick={goToWritePage}>글쓰기</NavWriteBtn>
         </MobileHide>
       </TopNav>
       <BottomNavContainer>
@@ -296,4 +314,4 @@ const BetaVersionInterior = styled.span`
   }
 `;
 
-export default Nav;
+export default withRouter(Nav);
